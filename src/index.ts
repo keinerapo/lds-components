@@ -1,1 +1,1 @@
-export {};
+export * from './foundation/base-element.js';
