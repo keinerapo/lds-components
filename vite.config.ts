@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,5 +16,13 @@ export default defineConfig({
       external: [],
     },
     sourcemap: true
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    include: ['src/**/*.test.ts'],
+    coverage: {
+      reporter: ['text', 'json', 'html']
+    }
   }
 });
