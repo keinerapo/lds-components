@@ -37,6 +37,11 @@ lerna-debug.log*
 coverage
 .nyc_output
 
+# ESLint old config (we use eslint.config.js now)
+.eslintrc.cjs
+.eslintrc.js
+.eslintrc.json
+
 # Temporary files
 *.tmp
 *.temp

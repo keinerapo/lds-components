@@ -2,8 +2,23 @@
   "name": "lds-components",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.js",
+  "description": "Modern Web Components library built with Lit - A lightweight, accessible design system",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/styles/tokens.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "test": "vitest",
     "test:watch": "vitest --watch",
@@ -14,14 +29,33 @@
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "web-components",
+    "lit",
+    "design-system",
+    "components",
+    "ui-library",
+    "typescript",
+    "custom-elements",
+    "shadow-dom",
+    "accessible"
+  ],
+  "author": "Keiner Pajaro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keinerapo/lds-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keinerapo/lds-components/issues"
+  },
+  "homepage": "https://github.com/keinerapo/lds-components#readme",
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.48.1",
     "@typescript-eslint/parser": "^8.48.1",
+    "@vitest/coverage-v8": "^4.0.15",
     "@vitest/ui": "^4.0.15",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
