@@ -11,7 +11,7 @@ describe('LdsModal', () => {
     const el = document.createElement('lds-modal') as LdsModal;
     document.body.appendChild(el);
 
-    // Esperar a que el componente se renderice
+    // Wait for the component to render
     await el.updateComplete;
 
     const shadow = el.shadowRoot as ShadowRoot;

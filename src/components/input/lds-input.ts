@@ -131,7 +131,6 @@ export class LdsInput extends BaseElement {
         padding: var(--lds-spacing-2) var(--lds-spacing-3);
         font-size: var(--lds-font-size-md);
         border: 1px solid rgba(148, 163, 184, 0.4);
-        background-color: rgba(15, 23, 42, 0.9);
         color: var(--lds-color-primary-contrast);
         outline: none;
         transition:
@@ -141,6 +140,7 @@ export class LdsInput extends BaseElement {
 
       input::placeholder {
         opacity: 0.6;
+        color: var(--lds-color-primary-contrast);
       }
 
       input:focus-visible {
