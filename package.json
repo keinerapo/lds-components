@@ -1,11 +1,14 @@
 {
-  "name": "lds-components",
+  "name": "@ldsui/components",
   "version": "1.0.0",
   "type": "module",
   "description": "Modern Web Components library built with Lit - A lightweight, accessible design system",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -51,10 +54,11 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsc -p tsconfig.build.json",
     "postbuild": "node scripts/copy-assets.mjs",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "pnpm run build && pnpm test --run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
