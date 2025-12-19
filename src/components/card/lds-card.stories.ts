@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import './lds-card';
+import { defineLdsCard } from './define';
 import type { LdsCard } from './lds-card';
+
+defineLdsCard();
 
 const meta: Meta<LdsCard> = {
   title: 'Components/Card',

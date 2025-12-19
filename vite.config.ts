@@ -12,12 +12,15 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'LdsComponents',
-      fileName: (format) => `lds-components.${format}.js`,
       formats: ['es'],
     },
     rollupOptions: {
-      external: [],
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        entryFileNames: '[name].js',
+      },
+      external: ['lit', 'lit/decorators.js', 'lit/directives/if-defined.js', 'lit/directives/class-map.js'],
     },
     sourcemap: true,
   },

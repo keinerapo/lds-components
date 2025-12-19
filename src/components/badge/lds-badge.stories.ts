@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import './lds-badge';
+import { defineLdsBadge } from './define';
 import type { LdsBadge } from './lds-badge';
+
+defineLdsBadge();
 
 const meta: Meta<LdsBadge> = {
   title: 'Components/Badge',

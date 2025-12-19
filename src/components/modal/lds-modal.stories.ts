@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import './lds-modal';
+import { defineLdsModal } from './define';
 import type { LdsModal } from './lds-modal';
+
+defineLdsModal();
 
 const meta: Meta<LdsModal> = {
   title: 'Components/Modal',

@@ -1,6 +1,6 @@
 import { css, html } from 'lit';
 import { BaseElement } from '../../foundation/base-element';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { validateEnum } from '../../foundation/validators';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
@@ -27,8 +27,7 @@ const BUTTON_SIZES: readonly ButtonSize[] = ['sm', 'md', 'lg'];
  *
  * @csspart button - The native button element
  */
-@customElement('lds-button')
-export class LdsButton extends BaseElement {
+class LdsButton extends BaseElement {
   private _variant: ButtonVariant = 'primary';
   private _size: ButtonSize = 'md';
 
@@ -153,6 +152,9 @@ export class LdsButton extends BaseElement {
     `;
   }
 }
+
+export default LdsButton;
+export { LdsButton };
 
 declare global {
   interface HTMLElementTagNameMap {

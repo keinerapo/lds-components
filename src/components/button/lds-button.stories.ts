@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import './lds-button';
+import { defineLdsButton } from './define';
 import type { LdsButton } from './lds-button';
+
+defineLdsButton();
 
 const meta: Meta<LdsButton> = {
   title: 'Components/Button',

@@ -1,5 +1,5 @@
 import { css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { BaseElement } from '../../foundation/base-element';
 import { validateEnum } from '../../foundation/validators';
@@ -29,8 +29,7 @@ const CARD_PADDINGS: readonly CardPadding[] = ['none', 'sm', 'md', 'lg'];
  * <lds-card interactive>Clickable card</lds-card>
  * ```
  */
-@customElement('lds-card')
-export class LdsCard extends BaseElement {
+class LdsCard extends BaseElement {
   private _elevation: CardElevation = 'sm';
   private _padding: CardPadding = 'md';
 
@@ -164,6 +163,9 @@ export class LdsCard extends BaseElement {
     `;
   }
 }
+
+export default LdsCard;
+export { LdsCard };
 
 declare global {
   interface HTMLElementTagNameMap {

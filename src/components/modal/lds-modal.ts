@@ -1,5 +1,5 @@
 import { css, html, nothing, PropertyValues } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { property, query } from 'lit/decorators.js';
 import { BaseElement } from '../../foundation/base-element';
 import { FocusManagementMixin } from '../../foundation/mixins/focus-management';
 
@@ -26,8 +26,7 @@ type CloseReason = 'backdrop' | 'esc' | 'programmatic';
  * </lds-modal>
  * ```
  */
-@customElement('lds-modal')
-export class LdsModal extends FocusManagementMixin(BaseElement) {
+class LdsModal extends FocusManagementMixin(BaseElement) {
   /**
    * Whether the modal is open/visible
    * @type {boolean}
@@ -199,6 +198,9 @@ export class LdsModal extends FocusManagementMixin(BaseElement) {
     `;
   }
 }
+
+export default LdsModal;
+export { LdsModal };
 
 declare global {
   interface HTMLElementTagNameMap {

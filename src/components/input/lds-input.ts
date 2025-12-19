@@ -1,5 +1,5 @@
 import { css, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { BaseElement } from '../../foundation/base-element';
 import { validateEnum } from '../../foundation/validators';
@@ -33,8 +33,7 @@ let inputIdCounter = 0;
  * <lds-input label="Username" helper-text="Choose a unique username"></lds-input>
  * ```
  */
-@customElement('lds-input')
-export class LdsInput extends BaseElement {
+class LdsInput extends BaseElement {
   /**
    * The label text for the input
    * @type {string}
@@ -231,6 +230,9 @@ export class LdsInput extends BaseElement {
     `;
   }
 }
+
+export default LdsInput;
+export { LdsInput };
 
 declare global {
   interface HTMLElementTagNameMap {

@@ -11,7 +11,33 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./tokens.css": "./dist/styles/tokens.css"
+    "./tokens.css": "./dist/styles/tokens.css",
+    "./define": {
+      "types": "./dist/define.d.ts",
+      "import": "./dist/define.js"
+    },
+    "./styles/tokens.css": "./dist/styles/tokens.css",
+
+    "./button": {
+      "types": "./dist/components/button/define.d.ts",
+      "import": "./dist/components/button/define.js"
+    },
+    "./badge": {
+      "types": "./dist/components/badge/define.d.ts",
+      "import": "./dist/components/badge/define.js"
+    },
+    "./input": {
+      "types": "./dist/components/input/define.d.ts",
+      "import": "./dist/components/input/define.js"
+    },
+    "./card": {
+      "types": "./dist/components/card/define.d.ts",
+      "import": "./dist/components/card/define.js"
+    },
+    "./modal": {
+      "types": "./dist/components/modal/define.d.ts",
+      "import": "./dist/components/modal/define.js"
+    }
   },
   "files": [
     "dist"
@@ -26,6 +52,7 @@
     "test:coverage": "vitest --coverage",
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/copy-assets.mjs",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "storybook": "storybook dev -p 6006",

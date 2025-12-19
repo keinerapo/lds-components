@@ -1,5 +1,5 @@
 import { css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { BaseElement } from '../../foundation/base-element';
 import { validateEnum } from '../../foundation/validators';
 
@@ -27,8 +27,7 @@ const BADGE_VARIANTS: readonly BadgeVariant[] = [
  * <lds-badge variant="error">Error</lds-badge>
  * ```
  */
-@customElement('lds-badge')
-export class LdsBadge extends BaseElement {
+class LdsBadge extends BaseElement {
   private _variant: BadgeVariant = 'primary';
 
   /**
@@ -98,6 +97,9 @@ export class LdsBadge extends BaseElement {
     return html`<span class=${classes}><slot></slot></span>`;
   }
 }
+
+export default LdsBadge;
+export { LdsBadge };
 
 declare global {
   interface HTMLElementTagNameMap {

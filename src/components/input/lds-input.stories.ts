@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import './lds-input';
+import { defineLdsInput } from './define';
 import type { LdsInput } from './lds-input';
+
+defineLdsInput();
 
 const meta: Meta<LdsInput> = {
   title: 'Components/Input',
